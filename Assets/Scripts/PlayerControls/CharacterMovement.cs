@@ -243,6 +243,12 @@ public abstract class CharacterMovement : MonoBehaviour
     private void CheckCollisionOnLayer(Vector2 point, float radius, LayerMask layer, Action<Collider2D[], int> OnCollisionMethod)
     {
         Collider2D[] colliders = Physics2D.OverlapCircleAll(point, radius, layer);
+        if (colliders.Length == 0)
+        {
+            m_isGrounded = false;
+            animator.SetBool("grounded", false);
+            return;
+        }
         for (int i = 0; i < colliders.Length; i++)
         {
             OnCollisionMethod(colliders, i);
@@ -272,6 +278,8 @@ public abstract class CharacterMovement : MonoBehaviour
             airJumps = maxJumps;
             m_canGrapple = true;
         }
+        
+        
     }
 
     public virtual void OnWallslideMethod(Collider2D[] colliders, int i)
