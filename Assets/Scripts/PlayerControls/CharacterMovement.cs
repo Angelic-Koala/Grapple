@@ -36,9 +36,9 @@ public abstract class CharacterMovement : MonoBehaviour
     [SerializeField] private bool m_isCrouching = false;
     [SerializeField] private bool m_isGrappling = false;
     [SerializeField] private bool m_isDashing = false;
-    [SerializeField] private bool m_canMove = true;
-    [SerializeField] private bool m_canAttack = true;
-    [SerializeField] private bool m_canTurn = true;
+    [SerializeField] public bool m_canMove = true;
+    [SerializeField] public bool m_canAttack = true;
+    [SerializeField] public bool m_canTurn = true;
     [SerializeField] private bool m_canGrapple = true;
     [SerializeField] private bool m_canDash = false;
 
@@ -232,7 +232,8 @@ public abstract class CharacterMovement : MonoBehaviour
     {
         m_currentState = newState;
         Debug.Log(m_currentState);
-        PlayAnimation(newState);
+        animator.Play(newState);
+        //PlayAnimation(newState);
     }
 
     #endregion StateManager ///////////////////////////////////////////////////////////////////////////////////////////////////////

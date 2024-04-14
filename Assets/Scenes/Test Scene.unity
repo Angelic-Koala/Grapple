@@ -449,27 +449,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1223017981}
-  player: {fileID: 99275162}
+  player: {fileID: 0}
   isAttacking: 0
   enemyLayer:
     serializedVersion: 2
     m_Bits: 512
-  abilities:
-  - {fileID: 11400000, guid: 97075c600b844c14fa979208823d9c61, type: 2}
-  - {fileID: 11400000, guid: 97075c600b844c14fa979208823d9c61, type: 2}
-  - {fileID: 11400000, guid: 97075c600b844c14fa979208823d9c61, type: 2}
-  - {fileID: 11400000, guid: 97075c600b844c14fa979208823d9c61, type: 2}
---- !u!114 &99275162 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4099116059599104699, guid: 41ef7c3df4c1c364296f33ea8b8162e0, type: 3}
-  m_PrefabInstance: {fileID: 1834976995}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 99275112}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 513cdf53afc5fff4e87845e4a89366b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  hitboxCollider: {fileID: 0}
+  attacks: []
 --- !u!1 &177209104
 GameObject:
   m_ObjectHideFlags: 0
@@ -3222,6 +3208,30 @@ MonoBehaviour:
   dashDuration: 0.12
   m_GroundCheck: {fileID: 2067847173}
   m_WallCheck: {fileID: 411174563}
+--- !u!114 &1581759721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1581759706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6e7ac2cd02fcae469643f3e4de54de9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 1581759707}
+  player: {fileID: 1581759716}
+  isAttacking: 0
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  hitboxCollider: {fileID: 2578255189529824881, guid: c6210a2d7c0d62946bde5f7ff4dac21c, type: 3}
+  attacks:
+  - {fileID: 11400000, guid: afeab3de3d890864a977bfde6615c0bf, type: 2}
+  - {fileID: 11400000, guid: afeab3de3d890864a977bfde6615c0bf, type: 2}
+  - {fileID: 11400000, guid: afeab3de3d890864a977bfde6615c0bf, type: 2}
+  - {fileID: 11400000, guid: afeab3de3d890864a977bfde6615c0bf, type: 2}
 --- !u!1001 &1582762888
 PrefabInstance:
   m_ObjectHideFlags: 0
